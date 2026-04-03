@@ -5,7 +5,7 @@ and population (integer) into a single string in the format "City, Country".
 
 """
 
-def format_city_country(city, country, population):
+def format_city_country(city, country, population= None):
     """Takes a city name, country name and optional population formats it as 'City, Country'."""
     if population is not None:
         formatted_location = f"{city}, {country} - Population: {population}"
@@ -18,6 +18,10 @@ def main():
     country = input("Enter the name of a country: ")
     population = input("Enter the population (optional): ")
 
+    if population:
+        population = int(population)
+    else:
+        population = None
     
 
     print(format_city_country(city, country, population))
