@@ -14,6 +14,7 @@ def format_city_country(city, country, population= None):
     return formatted_location
 
 def main():
+    """Main function to prompt user for city, country and population and print formatted location."""
     city = input("Enter the name of a city: ")
     country = input("Enter the name of a country: ")
     population = input("Enter the population (optional): ")
